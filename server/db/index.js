@@ -5,10 +5,10 @@ var mysql = require('mysql');
 //   password: '',
 //   database: 'passkeeper'
 // });  LOCAL CONNECTION
-// 
+
 
 var connection = mysql.createConnection({
-    host: ' mysqlcluster11.registeredsite.com',
+    host: 'mysqlcluster11.registeredsite.com',
     user: 'passkeeperadmin',
     password: '!Qaz2wsx3edc',
     database: 'passkeeper'
