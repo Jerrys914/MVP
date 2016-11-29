@@ -8,7 +8,7 @@ var mysql = require('mysql');
 // 
 
 var connection = mysql.createConnection({
-    host: ' https://mysqlcluster11.registeredsite.com',
+    host: ' mysqlcluster11.registeredsite.com',
     user: 'passkeeperadmin',
     password: '!Qaz2wsx3edc',
     database: 'passkeeper'
