@@ -1,6 +1,5 @@
 angular.module('passlock.users',[])
 .factory('userFactory',function($http) {
-
     return function postData(data) {
         $http({
             method:'POST',
@@ -17,7 +16,7 @@ angular.module('passlock.users',[])
 })
 .controller('enteruser', function($scope, $http, userFactory) {
     var sendData = function(data) {
-      passwordFactory(data);
+      userFactory(data);
       console.log('POST DATA: ', data)
     };
     $scope.data = {};

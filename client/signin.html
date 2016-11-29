@@ -1,16 +1,9 @@
-<html ng-controller="enteruser">
-  <h2>Signin</h2>
-  <form ng-submit="data.sendData(data)">
-      <div>
-        <label for="username">Username:</label>
-        <input id="username" type="text" name="username" ng-model='data.username'>
-      </div>
-      <div>
-        <label for="password">Password:</label>
-        <input id="password" type="text" name="password" ng-model='data.password'>
-      </div>
-      <div>
-        <button type="submit" value="Enter">Submit</button>
-      </div>
+<div id='signin'>
+  <h1>signin</h1>
+  <form name="signinForm" ng-submit='signin()'>
+    <input type='text' placeholder='username' ng-model='user.username'>
+    <input type="password" placeholder='password' ng-model='user.password'>
+    <button>signin</button>
   </form>
-</html>
+  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
+</div>

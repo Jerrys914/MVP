@@ -7,6 +7,9 @@
   "engines": {
     "node": ">=4.0.0"
   },
+  "scripts": {
+    "start": "node server/app.js"
+  },
   "dependencies": {
     "angular": "^1.5.9",
     "bcrypt": "^0.8.7",

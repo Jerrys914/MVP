@@ -1,4 +1,4 @@
-angular.module('passlock',['passlock.passwords', 'ngRoute'])
+angular.module('passlock',['passlock.passwords', 'passlock.users', 'ngRoute'])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/passwords', {
@@ -8,5 +8,9 @@ angular.module('passlock',['passlock.passwords', 'ngRoute'])
     .when('/enterpassword', {
       templateUrl: '../passwords/enterpassword.html',
       controller:'enterPassword'
+    })
+    .when('/signin', {
+      templateUrl: '../users/signin.html',
+      controller:'enteruser'  
     })
 });

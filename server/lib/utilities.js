@@ -2,6 +2,9 @@ var sessions = require('express-session');
 
 
 var isLoggedIn = function(req) {
+  if(!req.session) {
+    return false;
+  }
   console.log(`session: ${JSON.stringify(req.session)}`);
   if(req.session.username) {
     console.log('user already logged in');
@@ -15,8 +18,8 @@ var isLoggedIn = function(req) {
 exports.isUserAuth = function(req, res, next) {
   console.log('isUserAuth req: ',req.session)
 
-  if(!true) {
-    res.redirect('api/signin');
+  if(!isLoggedIn(req)) {
+    res.redirect('/#signup');
   } else {
     next();
   }

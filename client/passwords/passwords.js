@@ -29,7 +29,9 @@ angular.module('passlock.passwords',[])
     var sendData = function(data) {
       passwordFactory(data);
       console.log('POST DATA: ', data)
+     // console.log('POST DATA: ', data)
     };
     $scope.data = {};
+
     $scope.data.sendData = sendData;  
 })
