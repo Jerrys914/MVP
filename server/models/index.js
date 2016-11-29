@@ -9,7 +9,8 @@ module.exports = {
       });
     },
     post: function(params, callback) {
-        var queryString = 'INSERT INTO Passwords(name, userid, password) VALUES (?, (select id from users where username = ?), ?);';
+        console.log("PARAMS ASOIDHASOGFIHEOGIHE", params)
+        var queryString = 'INSERT INTO Passwords(name, userid, password) VALUES (?, ?, ?);';
         db.query(queryString,params, function(err,results) {
           callback(err,results)
         })

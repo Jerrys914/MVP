@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='passlock'>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+  <head>
+    <meta charset="utf-8" />
+    <title>PassLock</title>
+  </head>
+  <body>
+    <h1>PassLock</h1>
+
+    <div class="navigation">
+      <ul>
+        <li> <a href="#enterpassword" class="create">Enter Password</a></li>
+        <li> <a href="#passwords" class="index">Passwords</a></li>
+        <!-- <li ng-click="signout()" ng-hide="!isAuth()"><a href="#signout" class="create">Signout</a></li> -->
+      </ul>
+    </div>
+
+    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <div ng-view></div>
+      <script src="lib/angular/angular.js"></script>
+      <script src="lib/angular-route/angular-route.js"></script>
+
+      <script src="passwords/passwords.js"></script>
+
+      <script src="app/app.js"></script>
+  </body>
+</html>

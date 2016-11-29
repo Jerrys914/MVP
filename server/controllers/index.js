@@ -4,15 +4,13 @@ var models = require('../models');
 module.exports = {
   passwords: {
     get:function(req, res) {
-      console.log('PASSWORD REQUEST: ', req.body)
       models.password.get(1, function(err, results) { //change 1 to be logged in users id
-        console.log('RESULTS: ', results)
         res.json(results);
       });
     },
     post:function(req,res) {
       console.log('PASSWORD POST REQUEST: ', req.body)
-      var params = [req.body.name, req.body.id_Users, req.body.password];
+      var params = [req.body.name, 1, req.body.password];
       models.password.post(params, function(err, results) {
         if (err) { console.log('PASSWORD POST ERROR: ', err) }
         res.sendStatus(201);
