@@ -1,4 +1,6 @@
 var db = require('../db');
+var bcrypt = require('bcrypt');
+var Promise = require('bluebird');
 
 module.exports = {
   password: {
@@ -24,11 +26,20 @@ module.exports = {
         callback(err, results);
       })
     },
-    get:function(callback) {
-        var queryString = 'SELECT * from Users';
-        db.query(queryString, function(err, results) {
+    get:function(username, callback) {
+        var queryString = 'SELECT id from Users where username = ?;';
+        db.query(queryString, username, function(err, results) {
           callback(err,results);
         })
+    }, 
+    hashPass:function(password) {
+
+    },
+    comparePasswords:function(attemptedPassword, user,callback) {
+      var queryString = 'Select password from Users where username = ?;';
+      db.query(queryString, user, function(err, results) {
+        console.log('USER PASSWORD RESULT: ', results);
+      })
     }
   }
 };

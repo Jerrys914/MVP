@@ -14,6 +14,7 @@ app.use(parser.json());
 app.use(router);
 app.use(express.static(path.join(__dirname, '/../client')));
 
+
 if(!module.parent) {
   app.listen(app.get('port'));
   console.log('PassLock Listening on ', app.get('port'));
