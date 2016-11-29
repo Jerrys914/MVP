@@ -3,8 +3,9 @@ var mysql = require('mysql');
 // var connection = mysql.createConnection({
 //   user: 'root',
 //   password: '',
-//   database: 'passkeeper'
-// });  LOCAL CONNECTION
+//   database: 'passlock'
+// });  
+// LOCAL CONNECTION
 
 
 var connection = mysql.createConnection({

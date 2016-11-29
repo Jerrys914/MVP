@@ -7,12 +7,13 @@ module.exports = {
     get: function(userid, callback) {
       var queryString = 'SELECT * from Passwords where userid = ?;';
       db.query(queryString,userid, function(err,results) {
+        console.log("PASSWORDS RESULTS LHWDLFKHSDF:  ", results)
         callback(err, results);
       });
     },
     post: function(params, callback) {
         console.log("PARAMS ASOIDHASOGFIHEOGIHE", params)
-        var queryString = 'INSERT INTO Passwords(name, userid, password) VALUES (?, ?, ?);';
+        var queryString = 'INSERT INTO Passwords(name, password, userid) VALUES (?, ?, ?);';
         db.query(queryString,params, function(err,results) {
           callback(err,results)
         })
