@@ -21,6 +21,8 @@ angular.module('passlock.passwords',[])
 
         }).then(function(response) {
             console.log('RESPONSE: ', response);
+            data.name = '';
+            data.password = '';
             return response;
         })
     }
@@ -28,10 +30,7 @@ angular.module('passlock.passwords',[])
 .controller('enterPassword', function($scope, $http, passwordFactory) {
     var sendData = function(data) {
       passwordFactory(data);
-      console.log('POST DATA: ', data)
-     // console.log('POST DATA: ', data)
     };
     $scope.data = {};
-
     $scope.data.sendData = sendData;  
 })
